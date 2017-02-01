@@ -27,13 +27,15 @@ class MockKatana implements Katana {
   }
 }
 
+const container = new Container()
+container.parent = rootContainer
+
 container.bind(Ninja).toSelf()
 
 /*
-  If two lines below are removed, Katana class will be bind to Ninja class.
-  So in the case of that, "cut!" will be displayed in console.
+  If the line below are removed, Katana class will be bind to Ninja class.
+  So in that case, "cut!" will be displayed in console.
 */
-container.unbind(Katana)
 container.bind(Katana).to(MockKatana)
 
 const ninja = container.get(Ninja)

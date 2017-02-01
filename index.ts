@@ -39,7 +39,7 @@ container.bind(Ninja).toSelf()
 
 /*
   If the line below are removed, Katana class will be bind to Ninja class.
-  So in the case of that, "cut!" will be displayed in console.
+  So in that case, "cut!" will be displayed in console.
 */
 container.bind(Katana).to(MockKatana)
 
