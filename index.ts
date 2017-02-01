@@ -1,9 +1,10 @@
-# inversify-mock-example
-Mocking your class using DI based on InversifyJS
+import 'core-js'
+import { injectable } from 'inversify'
 
----
+import { container } from './container'
+import { Katana, Shuriken } from './services'
 
-```js
+
 @injectable()
 class Ninja {
   constructor(
@@ -20,12 +21,15 @@ class Ninja {
   }
 }
 
+
 @injectable()
 class MockKatana implements Katana {
   hit() {
     return 'cut! (mock)'
   }
 }
+
+
 
 container.bind(Ninja).toSelf()
 
@@ -36,29 +40,9 @@ container.bind(Ninja).toSelf()
 container.unbind(Katana)
 container.bind(Katana).to(MockKatana)
 
+
+
 const ninja = container.get(Ninja)
 
 console.log(ninja.fight()) // output: "cut! (mock)"
 console.log(ninja.sneak()) // output: "hit!"
-```
-
----
-
-## Setup
-```
-$ yarn install
-or
-$ npm install
-```
-
-## Run (ts files directly)
-```
-$ npm start
-or
-$ npm run ts index
-```
-
-## Build JS files
-```
-$ npm run build
-```

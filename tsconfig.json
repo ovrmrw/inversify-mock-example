@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "outDir": ".tscOutDir",
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "importHelpers": false,
+    "lib": [
+      "dom",
+      "es2017"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
