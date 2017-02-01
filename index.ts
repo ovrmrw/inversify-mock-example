@@ -1,7 +1,7 @@
 import 'core-js/es7/reflect'
 import { injectable } from 'inversify'
 
-import { rootContainer } from './container'
+import { rootContainer } from './inversify.config'
 import { Katana, Shuriken } from './services'
 
 
