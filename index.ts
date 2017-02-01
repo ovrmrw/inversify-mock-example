@@ -1,5 +1,5 @@
-import 'core-js'
-import { injectable, Container } from 'inversify'
+import 'core-js/es7/reflect'
+import { injectable } from 'inversify'
 
 import { rootContainer } from './container'
 import { Katana, Shuriken } from './services'
@@ -31,9 +31,7 @@ class MockKatana implements Katana {
 
 
 
-const container = new Container()
-container.parent = rootContainer
-
+const container = rootContainer.createChild()
 
 container.bind(Ninja).toSelf()
 
