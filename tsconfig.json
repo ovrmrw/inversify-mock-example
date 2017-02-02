@@ -8,7 +8,7 @@
     "outDir": ".tscOutDir",
     "skipLibCheck": true,
     "strictNullChecks": true,
-    "importHelpers": true,
+    "importHelpers": false,
     "lib": [
       "dom",
       "es2017"

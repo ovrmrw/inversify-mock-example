@@ -1,5 +1,6 @@
-import 'core-js/es7/reflect'
-import { injectable } from 'inversify'
+// import 'core-js/es7/reflect'
+import 'reflect-metadata'
+import { injectable, inject } from 'inversify'
 
 import { rootContainer } from './inversify.config'
 import { Katana, Shuriken } from './services'
@@ -8,6 +9,8 @@ import { Katana, Shuriken } from './services'
 @injectable()
 class Ninja {
   constructor(
+    // @inject(Katana) private katana: Katana,
+    // @inject(Shuriken) private shuriken: Shuriken,
     private katana: Katana,
     private shuriken: Shuriken,
   ) { }
