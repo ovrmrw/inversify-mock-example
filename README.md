@@ -27,8 +27,6 @@ class MockKatana implements Katana {
   }
 }
 
-const container = rootContainer.createChild()
-
 container.bind(Ninja).toSelf()
 
 /*
