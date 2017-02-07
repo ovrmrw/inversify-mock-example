@@ -9,10 +9,8 @@ import { Katana, Shuriken } from './services'
 @injectable()
 class Ninja {
   constructor(
-    // @inject(Katana) private katana: Katana,
-    // @inject(Shuriken) private shuriken: Shuriken,
-    private katana: Katana,
-    private shuriken: Shuriken,
+    @inject(Katana) private katana: Katana,
+    @inject(Shuriken) private shuriken: Shuriken,
   ) { }
 
   fight() {
